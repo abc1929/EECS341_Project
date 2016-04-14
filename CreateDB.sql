@@ -12,8 +12,8 @@ CREATE TABLE Subreddit(name VARCHAR(24) NOT NULL,
                         stacked BOOLEAN,
                         gilded BOOLEAN,
                         upvotes INTEGER,
-            PRIMARY KEY(post_id)
-            FOREIGN KEY (subreddit) REFERENCES Subreddit
+            PRIMARY KEY(post_id),
+            FOREIGN KEY (subreddit) REFERENCES Subreddit,
             FOREIGN KEY (username) REFERENCES User);
 
 CREATE TABLE Comment(comment_id INTEGER NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE Comment(comment_id INTEGER NOT NULL,
                        gilded BOOLEAN,
                        upvotes INTEGER,
                        text VARCHAR(1000),
-           PRIMARY KEY(comment_id)
+           PRIMARY KEY(comment_id),
            FOREIGN KEY (post_id) REFERENCES Post
            FOREIGN KEY (username) REFERENCES User);
 
@@ -40,18 +40,18 @@ CREATE TABLE Trophy(trophy_id INTEGER NOT NULL,
 CREATE TABLE Subscribes(username INTEGER NOT NULL,
                       subreddit VARCHAR(24) NOT NULL,
           PRIMARY KEY(username, subreddit),
-          FOREIGN KEY (username) REFERENCES User
+          FOREIGN KEY (username) REFERENCES User,
           FOREIGN KEY (subreddit) REFERENCES Subreddit);
 
 CREATE TABLE UserTrophies(username INTEGER NOT NULL,
                       trophy_id INTEGER NOT NULL,
           PRIMARY KEY(username, trophy_id),
-          FOREIGN KEY (username) REFERENCES User
+          FOREIGN KEY (username) REFERENCES User,
           FOREIGN KEY (trophy_id) REFERENCES Trophy);
 
 
 CREATE TABLE Moderator(username INTEGER NOT NULL,
                       subreddit VARCHAR(24) NOT NULL,
           PRIMARY KEY(username, subreddit),
-          FOREIGN KEY (username) REFERENCES User
+          FOREIGN KEY (username) REFERENCES User,
           FOREIGN KEY (subreddit) REFERENCES Subreddit);
