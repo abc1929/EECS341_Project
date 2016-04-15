@@ -1,9 +1,9 @@
 CREATE TABLE Subreddit (
-    name VARCHAR(24) NOT NULL,
+    subreddit VARCHAR(24) NOT NULL,
     banner_link VARCHAR(24),
     logo_link VARCHAR(24),
     users_online VARCHAR(24),
-    PRIMARY KEY (name)
+    PRIMARY KEY (subreddit)
 );
            
 CREATE TABLE User (
@@ -24,7 +24,7 @@ CREATE TABLE Post (
     upvotes INTEGER,
     PRIMARY KEY (post_id),
     FOREIGN KEY (subreddit)
-        REFERENCES Subreddit (name),
+        REFERENCES Subreddit (subreddit),
     FOREIGN KEY (username)
         REFERENCES User (username)
 );
@@ -52,17 +52,17 @@ CREATE TABLE Trophy (
 );
 
 CREATE TABLE Subscribes (
-    username INTEGER NOT NULL,
+    username VARCHAR(24) NOT NULL,
     subreddit VARCHAR(24) NOT NULL,
     PRIMARY KEY (username , subreddit),
     FOREIGN KEY (username)
         REFERENCES User (username),
     FOREIGN KEY (subreddit)
-        REFERENCES Subreddit (name)
+        REFERENCES Subreddit (subreddit)
 );
 
 CREATE TABLE UserTrophies (
-    username INTEGER NOT NULL,
+    username VARCHAR(24) NOT NULL,
     trophy_id INTEGER NOT NULL,
     PRIMARY KEY (username , trophy_id),
     FOREIGN KEY (username)
@@ -73,11 +73,11 @@ CREATE TABLE UserTrophies (
 
 
 CREATE TABLE Moderator (
-    username INTEGER NOT NULL,
+    username VARCHAR(24) NOT NULL,
     subreddit VARCHAR(24) NOT NULL,
     PRIMARY KEY (username , subreddit),
     FOREIGN KEY (username)
         REFERENCES User (username),
     FOREIGN KEY (subreddit)
-        REFERENCES Subreddit (name)
+        REFERENCES Subreddit (subreddit)
 );
