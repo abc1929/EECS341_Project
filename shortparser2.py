@@ -146,7 +146,7 @@ def subreddit_parse(subredditjson,subredditname):
 
 
 	posts['postid']+=post_ids; posts['title']+=post_titles ;posts['gilded']+=post_gilded; posts['post_content']+=post_contents
-	posts['author']+=authornames; posts['score']+=post_ups; posts['type']+=post_domains; posts['subreddit']+=[subredditname];
+	posts['author']+=authornames; posts['score']+=post_ups; posts['type']+=post_domains; posts['subreddit']+=[subredditname]*25;
 
 	user_parse(post_authors[i]);
 
