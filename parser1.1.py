@@ -13,6 +13,7 @@ import pprint as pp
 
 # way to get trophies from user? praw doesn't seem to have it in redditor object
 
+Counter = 0;
 
 
 # alternatively we could put main func with this thing as an input, nah
@@ -158,14 +159,14 @@ def subreddit_parse(subredditjson,subredditname):
 # parse posts to get comments
 def post_parse(postjson,pid):
 
-
+	global Counter;
 	for w in range(0,len(postjson[1]['data']['children'])-1):
 
 		comment_author=vars(postjson[1]['data']['children'][w])['author'];
 		if (comment_author==None) :
 			continue
 
-		myprint(comment_author)
+		myprint("Reading the comment of " + comment_author.name)
 		user_parse(comment_author);
 		comments['author']+=[comment_author.name];
 
@@ -174,6 +175,10 @@ def post_parse(postjson,pid):
 		comments['comment_content']+=[vars(postjson[1]['data']['children'][w])['body']];
 		comments['commentid']+=[vars(postjson[1]['data']['children'][w])['id']];
 		comments['postid']+=[pid];
+
+
+	Counter+=1;
+	myprint("Post finished! Current progress: " + str(Counter/2.51) +" %")
 
 
 
