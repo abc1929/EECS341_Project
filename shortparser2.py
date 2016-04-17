@@ -102,7 +102,7 @@ def subreddit_parse(subredditjson,subredditname):
 	current_subreddit_moderators = vars(this.get_moderators())['json_dict']['children']; # return a list of redditors objects
 	current_subreddit_moderator_names = [];
 	for k in range(0,len(current_subreddit_moderators)):
-		current_subreddit_moderator_names+=current_subreddit_moderators[k].name;
+		current_subreddit_moderator_names+=[current_subreddit_moderators[k].name];
 
 	subreddits['mods'] += [current_subreddit_moderator_names];
 
@@ -197,7 +197,7 @@ def user_parse(redditorobject):
 	redditors['name']+= [redditorobject.name];
 
 	trophyjson = r.request_json('https://www.reddit.com/user/'+redditorobject.name+'/trophies.json');
-	redditors['trophieids']+=trophy_parse(trophyjson);
+	redditors['trophieids']+=[trophy_parse(trophyjson)];
 
 
 def trophy_parse(json):
