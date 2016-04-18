@@ -1,0 +1,10 @@
+INSERT INTO Subreddit VALUES (34343,'http://b.thumbs.redditmedia.com/FfqETFhO_F3IZMkajdZ3tQP-sC0qBivEdJDlJo0btVM.png',11082721,'askreddit','http://b.thumbs.redditmedia.com/PXt8GnqdYu-9lgzb3iesJBLN21bXExRV1A45zdw4sYE.png');
+INSERT INTO Subreddit VALUES (24592,NULL,11010070,'funny',NULL);
+INSERT INTO Subreddit VALUES (9576,NULL,10951959,'todayilearned',NULL);
+INSERT INTO Subreddit VALUES (10436,'http://b.thumbs.redditmedia.com/VZX_KQLnI1DPhlEZ07bIcLzwR1Win808RIt7zm49VIQ.png',10866721,'pics',NULL);
+INSERT INTO Subreddit VALUES (1720,'http://b.thumbs.redditmedia.com/NYGpyQu_WzaA81QlfiZ4pKz_OTFI5Gz0tLF8CHOzl-I.png',10781986,'science',NULL);
+INSERT INTO Subreddit VALUES (11404,NULL,10773179,'worldnews',NULL);
+INSERT INTO Subreddit VALUES (1524,'http://b.thumbs.redditmedia.com/RqqzLNmhb6ZtUQF9iflcJNHaz3ox3lzfPa_IVsZ3dJY.png',10637002,'iama','http://a.thumbs.redditmedia.com/Je9hJkwwkO_gZblEkMwBK3_MG_laF1_uG5nGd-NEXt4.png');
+INSERT INTO Subreddit VALUES (4953,'http://b.thumbs.redditmedia.com/aKWBgkEo7FnZ1d598QhzMrSZ-J1mVCk2H4kxOiikL8A.png',9343504,'aww','http://b.thumbs.redditmedia.com/zIQDfi6LbflU8YAdY8fmDJxNu5PlNDIhEK9-YWs_l7M.png');
+INSERT INTO Subreddit VALUES (17353,'http://b.thumbs.redditmedia.com/anBbzz1v4lBVAJg98aim4X__AmV_y04AR8lVTfq_qyw.png',10176182,'videos',NULL);
+INSERT INTO Subreddit VALUES (14480,'http://b.thumbs.redditmedia.com/0PgZl68jAxA6T1BH6uvUQ5Bz1F1GrrJLCL8oi2Gz0Ak.png',10136459,'gaming',NULL);
