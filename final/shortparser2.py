@@ -2,7 +2,17 @@
 import requests,praw,json,urllib,time
 import pprint as pp
 
+def myprint(x):
+	return pp.pprint(x)
+
+# for the lols
+myprint('/n shortparser2  Copyright (C) 2016  abc1929')
+myprint(' This program comes with ABSOLUTELY NO WARRANTY;')
+myprint(' This is free software, and you are welcome to redistribute it')
+myprint(' under certain conditions;/n')
+
 # author: abc1929
+# GNU General Public License
 # total page json requests: 10+10*25= 260 (10 subreddits, 25 posts in the first page for each)
 # trophy json requests: one request per user parse.
 # json from subreddits cover subreddit and post table
@@ -31,8 +41,6 @@ subreddit_name_list = [
 
 
 
-def myprint(x):
-	return pp.pprint(x)
 
 
 # final data stored in dicts
